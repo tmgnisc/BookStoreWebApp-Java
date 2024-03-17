@@ -10,7 +10,7 @@ public class BookController {
 	public String home() {
 		return "home";
 	}
-	
+	hello testing
 
 }
 
