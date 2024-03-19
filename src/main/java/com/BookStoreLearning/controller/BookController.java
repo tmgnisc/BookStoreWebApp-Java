@@ -19,7 +19,7 @@ public class BookController {
 	
 	@GetMapping("/available_books")
 	public String getAllBook() {
-		return "booklist";
+		return "bookList";
 	}
 
 }
