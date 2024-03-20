@@ -1,8 +1,11 @@
 package com.BookStoreLearning.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.BookStoreLearning.entity.Book;
 import com.BookStoreLearning.service.BookService;
@@ -24,8 +27,12 @@ public class BookController {
 
 	
 	@GetMapping("/available_books")
-	public String getAllBook() {
-		return "bookList";
+	public ModelAndView getAllBook() {
+		List<Book>list=service.getAllBook();
+//		ModelAndView m = new ModelAndView();
+//		m.setViewName("bookList");
+//		m.addObject(m)
+		return new ModelAndView("bookList", "book", list);
 	}
 	
 	@PostMapping("/save")
