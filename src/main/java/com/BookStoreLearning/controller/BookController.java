@@ -42,6 +42,10 @@ public class BookController {
 		return "redirect:/available_books";
 	}
 	
+	@GetMapping("/my_books")
+	public String getMyBooks() {
+		return "myBooks";
+	}
 
 }
 

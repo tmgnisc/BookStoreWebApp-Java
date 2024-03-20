@@ -35,15 +35,30 @@
   </div>
 </nav>
 
-<div class="container text-center">
-<h1>Welcome To New Book Store Made By Nischal</h1>	
-<h5>Hello this is nischal and this is just testing and 
-	making crud app using java spring boot thymeleaf . 
-	I am doing this for self learning purpose
-	
-</h5>
-<img src="https://cdn.pixabay.com/photo/2023/01/25/19/26/man-7744408_960_720.jpg" alt="hor">
+<div class="conatainer my-5 col-md-6">
+	<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--<tr th:each="b :${book}">
+      <td th:text="${b.id}"></td>
+      <td th:text="${b.name}"></td>
+      <td th:text="${b.author}"></td>
+      <td th:text="${b.price}"></td>
+      <td><a class="btn btn-secondary btn-sm">Add to MyBook</a></td>
+    </tr>-->
+    
+  </tbody>
+</table>
 </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
