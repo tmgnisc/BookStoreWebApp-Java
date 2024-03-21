@@ -46,6 +46,12 @@ public class BookController {
 	public String getMyBooks() {
 		return "myBooks";
 	}
+	
+	@RequestMapping("/mylist/{id}")
+	public String getMyList(@PathVariable("id")int id) {
+		
+		return "";
+	}
 
 }
 
