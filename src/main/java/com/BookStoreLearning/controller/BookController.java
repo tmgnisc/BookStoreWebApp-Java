@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.BookStoreLearning.entity.Book;
+import com.BookStoreLearning.entity.MyBookList;
 import com.BookStoreLearning.service.BookService;
+import com.BookStoreLearning.service.MyBookListService;
 
 @Controller
 public class BookController {
@@ -19,6 +21,10 @@ public class BookController {
 	public String home() {
 		return "home";
 	}
+	
+	@Autowired
+	private MyBookListService mybookService;
+	
 	
 	@GetMapping("/book_register")
 	public String bookRegister() {
@@ -49,8 +55,10 @@ public class BookController {
 	
 	@RequestMapping("/mylist/{id}")
 	public String getMyList(@PathVariable("id")int id) {
-		
-		return "";
+		Book b=service.getBookById(id);
+		MyBookList mb= new MyBookList(b.getId(), b.getName(), b.getAuthor(), b.getPrice());
+		mybookService.saveMyBooks(mb);
+		return "redirect:/my_books";
 	}
 
 }

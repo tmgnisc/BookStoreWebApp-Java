@@ -1,7 +1,10 @@
 package com.BookStoreLearning.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import com.BookStoreLearning.entity.MyBookList;
 import com.BookStoreLearning.repository.MyBookRepository;
@@ -13,5 +16,10 @@ public class MyBookListService {
 	private MyBookRepository mybook;
 	public void saveMyBooks(MyBookList book) {
 		mybook.save(book);
+	}
+	
+	public List<MyBookList> getAllMyBooks(){
+		return mybook.findAll();
+		
 	}
 }

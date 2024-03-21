@@ -44,6 +44,13 @@ public String getPrice() {
 public void setPrice(String price) {
 	this.price = price;
 }
+public MyBookList(int id, String name, String author, String price) {
+	super();
+	this.id = id;
+	this.name = name;
+	this.author = author;
+	this.price = price;
+}
  
  
 }
